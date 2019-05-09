@@ -1,0 +1,18 @@
+
+assword = "flippy"
+guess = ""
+attempts = 0
+attempt_limit = 3
+lock_out = False
+
+while guess != password and not(lock_out):
+    if attempts < attempt_limit:
+        guess = input("Enter password: ")
+        attempts += 1
+    else:
+        lock_out = True
+        print("Multiple failed attempts, terminal locked")
+
+if guess == password:
+    print("Password successful, welcome to the machine. ")
+
